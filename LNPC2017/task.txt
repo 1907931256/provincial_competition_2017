@@ -1,0 +1,115 @@
+//用延时函数控制走正方形
+//		VelCrl(CAN1, 1, 8192);
+//		VelCrl(CAN1, 2, -8192);// 转一圈脉冲数4096，每秒供给脉冲数
+//		delay_s(3);
+//		VelCrl(CAN1, 2, -4096);
+//		delay_ms(1400);
+
+//用定时器控制走正方形		
+//		VelCrl(CAN1, 2, -4096);
+//		if(tim == 8950)
+//		{
+//			tim = 0;
+//		}
+//		if((tim >= 0 && tim < 4000)||(tim > 4950 && tim < 8950))
+//		{
+//			VelCrl(CAN1, 1, 8192);		
+//		}
+//		else 
+//			VelCrl(CAN1, 1, 0);
+
+//定位器测试
+//		VelCrl(CAN1, 1, 0);
+//		VelCrl(CAN1, 2, 0);
+
+		p = 10;
+		d = 2;
+//利用PID稳定角度
+//走直线的过程中控制角度
+//		if(angle != 0)
+//		{
+//			if(fabs(angle) > 1.0f)
+//			{
+//				dir1 = 0.0f - angle;
+//				u = p * dir1 + d * (dir1 - dir0);
+//				VelCrl(CAN1, 1, 10*u);
+//				VelCrl(CAN1, 2, 10*u);
+//				dir0 = dir1;	
+//			}
+//			else
+//			{
+//				VelCrl(CAN1, 1, 5000);
+//				VelCrl(CAN1, 2, -5000);
+//			}
+//		}
+//		else
+//		{
+//			VelCrl(CAN1, 1, 5000);
+//			VelCrl(CAN1, 2, -5000);
+//		}	
+
+//圆周运动闭环
+//				if(fabs(angle - angleRecord) > 27.5f)
+//				{
+//					while(angle != angleRecord)
+//					{
+//						dir1 = angleRecord - angle;
+//						u = 10 * p * dir1 + d * (dir1 - dir0);
+//						VelCrl(CAN1, 1, u);
+//						VelCrl(CAN1, 2, u);
+//						dir0 = dir1;
+//					}		
+//				}	
+//				else
+//				{
+//					VelCrl(CAN1, 1, 8192);
+//					VelCrl(CAN1, 2, -4096);
+//					delay_ms (500);
+//					angleRecord = angle;
+//				}						
+//				if(fabs(angleRecord - (-180.0f)) <= 0.001f)
+//				{
+//					angleRecord = 180.0f;
+//				}
+		VelCrl(CAN1, 1, 6000);
+		VelCrl(CAN1, 2, -6000);
+		if(fabs(x) > 10.0f)
+		{
+			angleRecord = -angle;
+			if(fabs(angleRecord - (-180.0f)) <= 0.001f)
+			{
+				angleRecord = 180.0f;
+			}
+			else if(fabs(angleRecord - (180.0f)) <= 0.001f)
+			{
+				angleRecord = -180.0f;
+			}
+			while(fabs(angle - angleRecord) > 0.1f)
+			{
+				dir1 = angleRecord - angle;
+				u = 10 * p * dir1;
+				VelCrl(CAN1, 1, u);
+				VelCrl(CAN1, 2, u);
+				dir0 = dir1;
+			}	
+			dir0 = 0.0;
+			dir1 = 0.0;
+			while(fabs(x - 0.0) > 10.0f)
+			{
+				dir1 = 0.0 - x;
+				u = 10 * p * dir1;
+				VelCrl(CAN1, 1, u);
+				VelCrl(CAN1, 2, -u);
+				dir0 = dir1;
+			}
+			dir0 = 0.0;
+			dir1 = 0.0;
+			while(fabs(angle - 0.0) > 1.0f)
+			{
+				dir1 = 0.0 - angle;
+				u = 10 * p * dir1;
+				VelCrl(CAN1, 1, u);
+				VelCrl(CAN1, 2, u);
+				dir0 = dir1;
+			}	
+		}		

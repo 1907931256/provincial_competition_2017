@@ -1,0 +1,15 @@
+.\obj\ringbuffer.o: ..\motion\ringbuffer.c
+.\obj\ringbuffer.o: ..\Action_User\MotionCard.h
+.\obj\ringbuffer.o: ..\motion\ringbuffer.h
+.\obj\ringbuffer.o: ..\motion\calculate.h
+.\obj\ringbuffer.o: ..\motion\stm32f4xx.h
+.\obj\ringbuffer.o: ..\Libraries\CMSIS\core_cm4.h
+.\obj\ringbuffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\ringbuffer.o: ..\Libraries\CMSIS\core_cmInstr.h
+.\obj\ringbuffer.o: ..\Libraries\CMSIS\cmsis_armcc.h
+.\obj\ringbuffer.o: ..\Libraries\CMSIS\core_cmFunc.h
+.\obj\ringbuffer.o: ..\Libraries\CMSIS\system_stm32f4xx.h
+.\obj\ringbuffer.o: ..\motion\Bspline.h
+.\obj\ringbuffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\ringbuffer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\obj\ringbuffer.o: ..\motion\posSystem.h

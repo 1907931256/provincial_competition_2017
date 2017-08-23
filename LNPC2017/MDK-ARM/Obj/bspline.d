@@ -1,0 +1,15 @@
+.\obj\bspline.o: ..\motion\Bspline.c
+.\obj\bspline.o: ..\motion\Bspline.h
+.\obj\bspline.o: ..\motion\calculate.h
+.\obj\bspline.o: ..\Action_User\MotionCard.h
+.\obj\bspline.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\obj\bspline.o: ..\motion\ringBuffer.h
+.\obj\bspline.o: ..\motion\stm32f4xx.h
+.\obj\bspline.o: ..\Libraries\CMSIS\core_cm4.h
+.\obj\bspline.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\bspline.o: ..\Libraries\CMSIS\core_cmInstr.h
+.\obj\bspline.o: ..\Libraries\CMSIS\cmsis_armcc.h
+.\obj\bspline.o: ..\Libraries\CMSIS\core_cmFunc.h
+.\obj\bspline.o: ..\Libraries\CMSIS\system_stm32f4xx.h
+.\obj\bspline.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\bspline.o: ..\motion\posSystem.h

@@ -1,0 +1,16 @@
+.\obj\pathfollowing.o: ..\motion\pathFollowing.c
+.\obj\pathfollowing.o: ..\motion\pathFollowing.h
+.\obj\pathfollowing.o: ..\motion\calculate.h
+.\obj\pathfollowing.o: ..\Action_User\MotionCard.h
+.\obj\pathfollowing.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\obj\pathfollowing.o: ..\motion\ringBuffer.h
+.\obj\pathfollowing.o: ..\motion\stm32f4xx.h
+.\obj\pathfollowing.o: ..\Libraries\CMSIS\core_cm4.h
+.\obj\pathfollowing.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\pathfollowing.o: ..\Libraries\CMSIS\core_cmInstr.h
+.\obj\pathfollowing.o: ..\Libraries\CMSIS\cmsis_armcc.h
+.\obj\pathfollowing.o: ..\Libraries\CMSIS\core_cmFunc.h
+.\obj\pathfollowing.o: ..\Libraries\CMSIS\system_stm32f4xx.h
+.\obj\pathfollowing.o: ..\motion\Bspline.h
+.\obj\pathfollowing.o: ..\motion\posSystem.h
+.\obj\pathfollowing.o: ..\Action_User\Move.h
